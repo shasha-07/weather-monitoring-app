@@ -1,0 +1,35 @@
+Topic: API Integration, State Management, and Conditional Rendering
+
+Requirements:
+
+Create a Weather App that fetches data from OpenWeatherMap API.
+Display current weather conditions, temperature, and humidity.
+Implement search functionality to fetch weather data for different cities.
+
+
+import React from 'react'
+import React ,{ useEffect } from 'react';
+
+const Weather = () => {
+  async function getWeather(){
+    try{
+      let response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY&units=metric");
+      let Data = await response.json();
+      console.log(Data);
+    }
+    catch(error){
+      console.error("Error fetching weather data:", error);
+    }
+  
+  useEffect(() => {
+    getWeather();
+  }, []);
+}
+  return (
+    <div>
+      {Data && <pre>{JSON.stringify(Data, null, 2)}</pre>}
+    </div>
+  )
+}
+
+export default Weather
