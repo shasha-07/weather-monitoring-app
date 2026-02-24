@@ -52,6 +52,7 @@ function App() {
           <p>Sealevel:{weather.main.sea_level}</p>
           <p>Weather: {weather.weather[0].description}</p>
         </div>
+      
       )}  
     </>
   );
