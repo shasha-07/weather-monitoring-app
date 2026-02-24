@@ -1,67 +1,96 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: Arial, sans-serif;
-    background-image: url(bgimage.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(bgimage.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
-.header{
-    text-align: center;
-    margin: 20px 500px;
-    font-size: 4rem;
-    width: 600px;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+
+.header {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 3rem;
+  width: 90%;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
+
 .card {
-    background-color: rgba(255, 255, 255, 0.275);
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    margin: 50px 600px;
-    display:inline-block
- }
- .card label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #333;
- }
- .card input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
- }
-    .card button {
-        display: block;
-        margin: 10px 0;
-        padding: 10px 20px;
-        width: 100%;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .card button:hover {
-        background-color: #0056b3;
-    }
-    .weather-info {
-    margin: 20px 650px;
-    padding: 20px;
-    width: 300px;
-    background-color: #f9f9f936;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: white;
-    }
+  background-color: rgba(255, 255, 255, 0.275);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.weather-info {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+  background-color: #f9f9f936;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card label,
+  .card input,
+  .card button {
+    font-size: 1rem;
+  }
+
+  .weather-info {
+    padding: 15px;
+  }
+}
